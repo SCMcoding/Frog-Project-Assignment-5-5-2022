@@ -13,4 +13,13 @@ public class GMod : MonoBehaviour
         1f * Time.deltaTime);
 
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+
+       
+    }
 }
