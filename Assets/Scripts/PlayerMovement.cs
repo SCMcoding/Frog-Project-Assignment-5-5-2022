@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "GMod")
         {
             Destroy(gameObject);
+         
         }
 
        
@@ -33,10 +35,18 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Goal")
 
+            Debug.Log("Area Cleared");
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(currentSceneName);
 
-            Debug.Log("Area Cleared");            
-                
+
+
+
     }
+
+
+
+
 
 
 
