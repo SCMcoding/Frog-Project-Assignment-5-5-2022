@@ -21,10 +21,8 @@ public class GameManager : MonoBehaviour
             SpawnCar();
         }
 
+
      
-        
-
-
 
     }
 

@@ -8,6 +8,7 @@ TagManager:
   - Frog
   - GMod
   - Goal
+  - AudioSource
   layers:
   - Default
   - TransparentFX

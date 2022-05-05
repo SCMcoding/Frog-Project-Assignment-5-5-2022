@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5.0f;
+    public GameManager gameManager; 
+    public AudioSource audioSource;
 
     // Update is called once per frame
     void Update()
@@ -36,13 +38,14 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "Goal")
 
             Debug.Log("Area Cleared");
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentSceneName);
+       
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-
+       
 
 
     }
+
 
 
 
